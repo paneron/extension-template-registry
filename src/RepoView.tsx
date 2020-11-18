@@ -5,8 +5,6 @@ import log from 'electron-log';
 import type React from 'react';
 import { jsx } from '@emotion/core';
 
-import type { RepositoryViewProps } from '@riboseinc/paneron-extension-kit/types';
-
 Object.assign(console, log);
 
 import { RegistryView } from '@riboseinc/paneron-registry-kit/views';
@@ -169,10 +167,8 @@ const subregisters = {
 }
 
 
-export const RepositoryView: React.FC<RepositoryViewProps> =
-function (props) {
+export default function () {
   return <RegistryView
-    {...props}
     itemClassConfiguration={itemConfig}
     subregisters={subregisters}
   />
